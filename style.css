@@ -1,0 +1,219 @@
+@import url(//db.onlinewebfonts.com/c/12ebd34c028bbc48cc5a0c63fdf1788a?family=Helvetica+Neue+LT+Com);
+@font-face {
+	font-family: "Helvetica Neue LT Com";
+	src: url("//db.onlinewebfonts.com/t/12ebd34c028bbc48cc5a0c63fdf1788a.eot");
+	src: url("//db.onlinewebfonts.com/t/12ebd34c028bbc48cc5a0c63fdf1788a.eot?#iefix") format("embedded-opentype"),
+		url("//db.onlinewebfonts.com/t/12ebd34c028bbc48cc5a0c63fdf1788a.woff2") format("woff2"),
+		url("//db.onlinewebfonts.com/t/12ebd34c028bbc48cc5a0c63fdf1788a.woff") format("woff"),
+		url("//db.onlinewebfonts.com/t/12ebd34c028bbc48cc5a0c63fdf1788a.ttf") format("truetype"),
+		url("//db.onlinewebfonts.com/t/12ebd34c028bbc48cc5a0c63fdf1788a.svg#Helvetica Neue LT Com") format("svg");
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: black;
+	background-image: url('Images/PO_BGv2.jpg');
+	background-size: cover;
+	font-family: "Helvetica Neue LT Com", sans-serif;
+}
+.container {
+	display: grid;
+	position: relative;
+	margin: auto;
+	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
+	gap: 5px 5px;
+	grid-auto-flow: row;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
+	grid-template-areas: ". ." ". ." ". .";
+}
+
+#header {
+	grid-column: 1 / span 2;
+	grid-row: 1;
+	color: #fcfce0;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+#x {
+	font-size: 2.5rem;
+	text-shadow: 2px 0 10px #000;
+}
+
+.headerImg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	width: 50%;
+	height: auto;
+	object-fit: cover;
+	align-self: center;
+}
+
+#details {
+	grid-row: 2;
+	grid-column: 1;
+	color: #fcfce0;
+	text-shadow: 2px 0 10px #000;
+	font-size: 1.8rem;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: .8rem;
+	margin: 0 auto;
+}
+
+#form {
+	grid-column: 2;
+	grid-row: 2;
+	color: #fcfce0;
+	display: flex;
+	padding: .75rem 1.25rem;
+	margin: 0 auto;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	text-shadow: 2px 0 10px #000;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 10px 10px 10px 10px;
+}
+
+select {
+	display: flex;
+}
+
+input,
+select {
+	width: 75%;
+	height: 5rem;
+}
+
+.indicates-required {
+	color: #ace8ea;
+}
+
+.prizes {
+	color: #ace8ea;
+	font-size: 2rem;
+	text-shadow: 2px 0 10px #000;
+}
+input[type=text],
+input[type=number],
+input[type=email],
+select,
+input[type=submit] {
+	display: inline-flex;
+	font-size: 1.2em;
+	width: 20rem;
+	margin: .4rem .2rem;
+	justify-content: center;
+	flex-flow: row wrap;
+	align-items: center;
+	align-content: center;
+	flex-basis: auto;
+	align-self: center;
+	width: 20rem;
+	height: 4rem;
+}
+
+#agereq {
+	font-size: 1.25rem;
+	text-shadow: 2px 0 10px #000;
+	font-stretch: extra-expanded;
+}
+#contestlength {
+	font-size: 2rem;
+	text-shadow: 2px 0 10px #000;
+	font-stretch: extra-expanded;
+}
+.screenreader {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	width: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	word-wrap: normal !important;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		grid-template-columns: 1fr;
+		grid-auto-rows: minmax(min-content, max-content);
+		align-items: flex-start;
+	}
+	#details {
+		grid-column: 1;
+		grid-row: 2;
+		font-size: 1.25rem;
+	}
+
+	#contestlength {
+		font-size: 1.5rem;
+		text-shadow: 2px 0 10px #000;
+		font-stretch: extra-expanded;
+	}
+
+	#form {
+		grid-column: 1;
+		grid-row: 3;
+		color: #fcfce0;
+		display: flex;
+		margin: 0 auto;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		text-shadow: 2px 0 10px #000;
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+
+	#agereq {
+		font-size: .7em;
+		text-shadow: 2px 0 10px #000;
+	}
+
+	#header {
+		grid-column: 1;
+	}
+
+	.headerImg {
+		width: 100%;
+		height: auto;
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.prizes {
+		color: #ace8ea;
+		font-size: 1.5rem;
+		text-shadow: 2px 0 10px #000;
+	}
+
+	input[type=text],
+	input[type=number],
+	input[type=email],
+	select,
+	input[type=submit] {
+		display: inline-flex;
+		font-size: 1em;
+		margin: .4rem .2rem;
+		justify-content: center;
+		flex-flow: row wrap;
+		align-items: center;
+		align-content: center;
+		flex-basis: auto;
+		align-self: center;
+		width: 9.25rem;
+		height: 3rem;
+	}
+}
