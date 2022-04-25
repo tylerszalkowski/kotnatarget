@@ -15,7 +15,7 @@
 
 body {
 	background-color: black;
-	background-image: url('Images/PO_BGv2.jpg');
+	background-image: url('/Images/PO_BGv2.jpg');
 	background-size: cover;
 	font-family: "Helvetica Neue LT Com", sans-serif;
 }
