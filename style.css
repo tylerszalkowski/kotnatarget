@@ -15,7 +15,7 @@
 
 body {
 	background-color: black;
-	background-image: url('Images/PO_BGv2.jpg');
+	background-image: url('/Images/PO_BGv2.jpg');
 	background-size: cover;
 	font-family: "Helvetica Neue LT Com", sans-serif;
 }
@@ -37,6 +37,11 @@ h2 {
 	grid-template-areas: ". ." ". ." ". .";
 }
 
+input:focus {
+	background-color: #fcfce0;
+	border-bottom: 4px solid black;
+}
+
 #header {
 	grid-column: 1 / span 2;
 	grid-row: 1;
@@ -47,7 +52,7 @@ h2 {
 	align-items: center;
 	justify-content: center;
 	align-self: center;
-	width: 50%;
+	width: 60%;
 }
 
 .headerImg {
